@@ -90,7 +90,39 @@ header .btn:hover {
 }
 
 .floating-box {
-  width: 200px; /* For desktop */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 350px; /* Maximum width on desktop */
+  width: 90%; /* Adjust width to fit smaller screens */
+  text-align: center; /* Center the text content */
+}
+
+.floating-box h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.floating-box p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.floating-box a.btn {
+  display: inline-block;
+  background-color: #2f73e0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.floating-box a.btn:hover {
+  background-color: #0056b3;
 }
 
 .floating-box1 {
@@ -98,7 +130,6 @@ header .btn:hover {
   max-width: 100%;
 }
 
-.floating-box h3,
 .floating-box1 h2 {
   margin-top: 0;
 }
@@ -202,7 +233,16 @@ form {
   }
 
   .floating-box {
-    width: 90%; /* Expand to full width on smaller screens */
+    max-width: 90%; /* Adjust to fit within mobile/tablet screens */
+    padding: 15px;
+  }
+
+  .floating-box h3 {
+    font-size: 1.3em;
+  }
+
+  .floating-box p {
+    font-size: 1em;
   }
 
   .floating-box1 {
@@ -241,6 +281,14 @@ form {
   .floating-box1 {
     padding: 15px;
     width: 100%;
+  }
+
+  .floating-box h3 {
+    font-size: 1.2em;
+  }
+
+  .floating-box p {
+    font-size: 0.95em;
   }
 
   footer .left,
