@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  width: 100%; /* Change max-width to width for full screen */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -67,14 +67,14 @@ header .btn:hover {
 /* Image Styles */
 .image {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%; /* Adjust to allow full width */
   height: auto;
   border-radius: 15px;
 }
 
 .image1 {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%; /* Adjust to allow full width */
   height: auto;
   border-radius: 15px;
 }
@@ -87,17 +87,7 @@ header .btn:hover {
   border-radius: 10px;
   box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-}
-
-.floating-box {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 350px; /* Maximum width on desktop */
-  width: 90%; /* Adjust width to fit smaller screens */
-  text-align: center; /* Center the text content */
+  width: 100%; /* Set to 100% for full width */
 }
 
 .floating-box h3 {
@@ -125,18 +115,10 @@ header .btn:hover {
   background-color: #0056b3;
 }
 
-.floating-box1 {
-  width: 1000px; /* For desktop */
-  max-width: 100%;
-}
-
-.floating-box1 h2 {
-  margin-top: 0;
-}
-
 /* Section Styling */
 .section {
   padding: 40px 0;
+  width: 100%; /* Ensure section takes full width */
 }
 
 .btn {
@@ -233,7 +215,6 @@ form {
   }
 
   .floating-box {
-    max-width: 90%; /* Adjust to fit within mobile/tablet screens */
     padding: 15px;
   }
 
@@ -245,15 +226,17 @@ form {
     font-size: 1em;
   }
 
-  .floating-box1 {
-    width: 100%;
-  }
-
   footer .left,
   footer .right {
     float: none;
     width: 100%;
     text-align: center;
+  }
+
+  /* Ensure form iframe is responsive */
+  .form-group iframe {
+    width: 100%; /* Full width for mobile */
+    height: auto; /* Adjust height automatically */
   }
 }
 
@@ -280,7 +263,7 @@ form {
   .floating-box,
   .floating-box1 {
     padding: 15px;
-    width: 100%;
+    width: 100%; /* Full width on mobile */
   }
 
   .floating-box h3 {
