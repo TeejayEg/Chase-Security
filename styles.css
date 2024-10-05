@@ -295,4 +295,9 @@ form {
   footer .right {
     text-align: center;
   }
+
+  /* Adjust iframe height for mobile */
+  #chase-form .form-group iframe {
+    height: 600px; /* Set a suitable height for mobile */
+  }
 }
