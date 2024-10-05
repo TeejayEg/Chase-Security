@@ -18,11 +18,10 @@ header {
   background-color: #237fdb;
   color: #fff;
   padding: 20px 0;
-  text-align: center;
 }
 
 header .logo img {
-  height: 30px;
+  height: 40px; /* Larger size for desktop */
 }
 
 header nav ul {
@@ -48,8 +47,8 @@ header nav ul li a:hover {
 }
 
 header .cta {
-  display: inline-block;
-  margin-top: 10px;
+  float: right;
+  margin-top: -45px; /* Aligns button to right on desktop */
 }
 
 header .btn {
@@ -68,12 +67,14 @@ header .btn:hover {
 /* Image Styles */
 .image {
   width: 100%;
+  max-width: 1200px;
   height: auto;
   border-radius: 15px;
 }
 
 .image1 {
   width: 100%;
+  max-width: 1200px;
   height: auto;
   border-radius: 15px;
 }
@@ -86,7 +87,15 @@ header .btn:hover {
   border-radius: 10px;
   box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  width: 100%;
+}
+
+.floating-box {
+  width: 300px; /* For desktop */
+}
+
+.floating-box1 {
+  width: 1000px; /* For desktop */
+  max-width: 100%;
 }
 
 .floating-box h3,
@@ -122,20 +131,12 @@ footer {
   clear: both;
 }
 
-footer .left,
-footer .right {
-  display: inline-block;
-  width: 48%;
-  text-align: left;
+footer .left {
+  float: left;
 }
 
 footer .right {
-  text-align: right;
-}
-
-footer .left,
-footer .right {
-  float: none;
+  float: right;
 }
 
 /* Form Styles */
@@ -181,12 +182,18 @@ form {
   background-color: #1b57b8;
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive Styles */
 
 /* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
   header .logo img {
-    height: 25px;
+    height: 30px;
+  }
+
+  header .cta {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
   }
 
   header ul li {
@@ -194,13 +201,17 @@ form {
     margin: 10px 0;
   }
 
-  .floating-box1,
   .floating-box {
-    padding: 20px;
+    width: 100%; /* Expand to full width on smaller screens */
+  }
+
+  .floating-box1 {
+    width: 100%;
   }
 
   footer .left,
   footer .right {
+    float: none;
     width: 100%;
     text-align: center;
   }
@@ -209,10 +220,14 @@ form {
 /* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
   header .logo img {
-    height: 20px;
+    height: 25px;
   }
 
-  header .cta {
+  header ul li {
+    margin: 5px 0;
+  }
+
+  .cta {
     margin-top: 15px;
   }
 
@@ -222,16 +237,14 @@ form {
     height: auto;
   }
 
-  .floating-box1,
-  .floating-box {
+  .floating-box,
+  .floating-box1 {
     padding: 15px;
-    margin-top: 15px;
+    width: 100%;
   }
 
   footer .left,
   footer .right {
-    width: 100%;
     text-align: center;
-    float: none;
   }
 }
