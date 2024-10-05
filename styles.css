@@ -64,15 +64,6 @@ header .btn:hover {
   background-color: #0056b3;
 }
 
-/* Mobile and Desktop Containers */
-.container.desktop {
-  display: block; /* Show on desktop */
-}
-
-.container.mobile {
-  display: none; /* Hide mobile container by default */
-}
-
 /* Image Styles */
 .image {
   width: 100%;
@@ -263,15 +254,6 @@ form {
     float: none;
     width: 100%;
     text-align: center;
-  }
-
-  /* Mobile Styles */
-  .container.mobile {
-    display: block; /* Show on mobile */
-  }
-
-  .container.desktop {
-    display: none; /* Hide desktop container */
   }
 }
 
