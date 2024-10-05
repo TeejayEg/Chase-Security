@@ -1,4 +1,4 @@
-/* Basic styles */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -13,19 +13,18 @@ body {
   padding: 0 20px;
 }
 
-/* Header Styling */
+/* Header Styles */
 header {
   background-color: #237fdb;
   color: #fff;
   padding: 20px 0;
-  position: relative;
+  text-align: center;
 }
 
 header .logo img {
-  height: 40px; /* Adjusted for better visibility */
+  height: 30px;
 }
 
-/* Navigation styling */
 header nav ul {
   list-style-type: none;
   margin: 0;
@@ -41,6 +40,7 @@ header ul li {
 header nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
 header nav ul li a:hover {
@@ -48,49 +48,38 @@ header nav ul li a:hover {
 }
 
 header .cta {
-  float: right;
-  position: relative;
+  display: inline-block;
+  margin-top: 10px;
 }
 
-/* Main Section */
-.main {
-  padding: 20px 0;
+header .btn {
+  background-color: #2f73e0;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
+header .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Image Styles */
 .image {
-  width: 100%; /* Make images responsive */
-  height: auto; /* Preserve aspect ratio */
+  width: 100%;
+  height: auto;
   border-radius: 15px;
 }
 
 .image1 {
-  width: 100%; /* Make images responsive */
-  height: auto; /* Preserve aspect ratio */
+  width: 100%;
+  height: auto;
   border-radius: 15px;
 }
 
-/* Floating Box */
-.floating-box {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-  width: 100%; /* Make it responsive */
-  max-width: 300px;
-}
-
-.floating-box h3 {
-  margin: 0;
-}
-
-.floating-box .btn {
-  display: block;
-  margin-top: 10px;
-  width: 85px;
-}
-
-/* Floating Box 1 */
+/* Floating Box Styles */
+.floating-box,
 .floating-box1 {
   background-color: #fff;
   padding: 20px;
@@ -98,11 +87,10 @@ header .cta {
   box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
   width: 100%;
-  max-width: 1000px;
-  margin: 20px auto; /* Center align */
 }
 
-.floating-box p {
+.floating-box h3,
+.floating-box1 h2 {
   margin-top: 0;
 }
 
@@ -111,7 +99,6 @@ header .cta {
   padding: 40px 0;
 }
 
-/* Buttons */
 .btn {
   display: inline-block;
   background-color: #2f73e0;
@@ -126,18 +113,29 @@ header .cta {
   background-color: #0056b3;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
   background-color: #f9f9f9;
   color: #333;
   padding: 20px 0;
   text-align: center;
+  clear: both;
 }
 
-footer .left, footer .right {
-  width: 100%;
-  float: none; /* Removed float for better responsiveness */
-  text-align: center;
+footer .left,
+footer .right {
+  display: inline-block;
+  width: 48%;
+  text-align: left;
+}
+
+footer .right {
+  text-align: right;
+}
+
+footer .left,
+footer .right {
+  float: none;
 }
 
 /* Form Styles */
@@ -183,75 +181,57 @@ form {
   background-color: #1b57b8;
 }
 
-/* ===== Responsive Design ===== */
+/* Media Queries for Responsiveness */
 
-/* Tablet View (max-width: 768px) */
+/* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
-
   header .logo img {
-    height: 30px; /* Make logo smaller for tablets */
+    height: 25px;
   }
 
   header ul li {
     display: block;
-    text-align: center;
-    margin-bottom: 10px;
+    margin: 10px 0;
   }
 
-  header .cta {
-    float: none;
-    text-align: center;
+  .floating-box1,
+  .floating-box {
+    padding: 20px;
   }
 
-  .image, .image1 {
+  footer .left,
+  footer .right {
     width: 100%;
-    height: auto;
-  }
-
-  .floating-box, .floating-box1 {
-    width: 100%;
-    max-width: 100%;
+    text-align: center;
   }
 }
 
-/* Mobile View (max-width: 480px) */
+/* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
-
   header .logo img {
-    height: 25px; /* Smaller logo for mobile */
+    height: 20px;
   }
 
-  header nav ul {
-    padding: 0;
+  header .cta {
+    margin-top: 15px;
   }
 
-  header ul li {
-    margin: 0;
-    padding: 5px;
-  }
-
-  .image, .image1 {
+  .image,
+  .image1 {
     width: 100%;
     height: auto;
   }
 
+  .floating-box1,
   .floating-box {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  footer .left,
+  footer .right {
     width: 100%;
-    max-width: 300px;
-    margin: 10px auto; /* Center align */
-  }
-
-  .floating-box1 {
-    max-width: 100%; /* Make full width */
-  }
-
-  footer .left, footer .right {
     text-align: center;
-    float: none; /* Ensures proper centering */
-  }
-
-  .form-group iframe {
-    width: 100%; /* Form scaling */
-    height: 500px;
+    float: none;
   }
 }
