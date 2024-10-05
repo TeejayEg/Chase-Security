@@ -90,7 +90,7 @@ header .btn:hover {
 }
 
 .floating-box {
-  width: 300px; /* For desktop */
+  width: 70px; /* For desktop */
 }
 
 .floating-box1 {
@@ -202,7 +202,7 @@ form {
   }
 
   .floating-box {
-    width: 100%; /* Expand to full width on smaller screens */
+    width: 70%; /* Expand to full width on smaller screens */
   }
 
   .floating-box1 {
