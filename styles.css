@@ -1,3 +1,4 @@
+/* Basic styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -12,16 +13,19 @@ body {
   padding: 0 20px;
 }
 
+/* Header Styling */
 header {
   background-color: #237fdb;
   color: #fff;
   padding: 20px 0;
+  position: relative;
 }
 
 header .logo img {
-  height: 20px;
+  height: 40px; /* Adjusted for better visibility */
 }
 
+/* Navigation styling */
 header nav ul {
   list-style-type: none;
   margin: 0;
@@ -45,31 +49,35 @@ header nav ul li a:hover {
 
 header .cta {
   float: right;
+  position: relative;
 }
 
+/* Main Section */
 .main {
   padding: 20px 0;
 }
 
 .image {
-  width: 1200px;
-  height: 600px;
+  width: 100%; /* Make images responsive */
+  height: auto; /* Preserve aspect ratio */
   border-radius: 15px;
 }
 
 .image1 {
-  width: 1200px;
-  height: 400px;
+  width: 100%; /* Make images responsive */
+  height: auto; /* Preserve aspect ratio */
   border-radius: 15px;
 }
 
+/* Floating Box */
 .floating-box {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  width: 300px;
+  width: 100%; /* Make it responsive */
+  max-width: 300px;
 }
 
 .floating-box h3 {
@@ -82,25 +90,28 @@ header .cta {
   width: 85px;
 }
 
+/* Floating Box 1 */
 .floating-box1 {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  width: 1000px;
-  max-width: 1500px;
-  margin: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto; /* Center align */
 }
 
 .floating-box p {
   margin-top: 0;
 }
 
+/* Section Styling */
 .section {
   padding: 40px 0;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   background-color: #2f73e0;
@@ -115,6 +126,7 @@ header .cta {
   background-color: #0056b3;
 }
 
+/* Footer */
 footer {
   background-color: #f9f9f9;
   color: #333;
@@ -122,12 +134,10 @@ footer {
   text-align: center;
 }
 
-footer .left {
-  float: left;
-}
-
-footer .right {
-  float: right;
+footer .left, footer .right {
+  width: 100%;
+  float: none; /* Removed float for better responsiveness */
+  text-align: center;
 }
 
 /* Form Styles */
@@ -140,7 +150,6 @@ form {
   max-width: 700px;
   margin: 0 auto;
 }
-
 
 .form-group {
   margin-bottom: 20px;
@@ -172,4 +181,77 @@ form {
 
 .form-group input[type="submit"]:hover {
   background-color: #1b57b8;
+}
+
+/* ===== Responsive Design ===== */
+
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+
+  header .logo img {
+    height: 30px; /* Make logo smaller for tablets */
+  }
+
+  header ul li {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  header .cta {
+    float: none;
+    text-align: center;
+  }
+
+  .image, .image1 {
+    width: 100%;
+    height: auto;
+  }
+
+  .floating-box, .floating-box1 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+
+  header .logo img {
+    height: 25px; /* Smaller logo for mobile */
+  }
+
+  header nav ul {
+    padding: 0;
+  }
+
+  header ul li {
+    margin: 0;
+    padding: 5px;
+  }
+
+  .image, .image1 {
+    width: 100%;
+    height: auto;
+  }
+
+  .floating-box {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto; /* Center align */
+  }
+
+  .floating-box1 {
+    max-width: 100%; /* Make full width */
+  }
+
+  footer .left, footer .right {
+    text-align: center;
+    float: none; /* Ensures proper centering */
+  }
+
+  .form-group iframe {
+    width: 100%; /* Form scaling */
+    height: 500px;
+  }
 }
