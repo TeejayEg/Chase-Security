@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  width: 100%; /* Change max-width to width for full screen */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -67,14 +67,14 @@ header .btn:hover {
 /* Image Styles */
 .image {
   width: 100%;
-  max-width: 100%; /* Adjust to allow full width */
+  max-width: 1200px;
   height: auto;
   border-radius: 15px;
 }
 
 .image1 {
   width: 100%;
-  max-width: 100%; /* Adjust to allow full width */
+  max-width: 1200px;
   height: auto;
   border-radius: 15px;
 }
@@ -87,7 +87,8 @@ header .btn:hover {
   border-radius: 10px;
   box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  width: 100%; /* Set to 100% for full width */
+  max-width: 90%; /* Max width for all screens */
+  width: 100%; /* Full width on smaller screens */
 }
 
 .floating-box h3 {
@@ -118,7 +119,6 @@ header .btn:hover {
 /* Section Styling */
 .section {
   padding: 40px 0;
-  width: 100%; /* Ensure section takes full width */
 }
 
 .btn {
@@ -215,6 +215,7 @@ form {
   }
 
   .floating-box {
+    max-width: 90%; /* Adjust to fit within mobile/tablet screens */
     padding: 15px;
   }
 
@@ -224,6 +225,10 @@ form {
 
   .floating-box p {
     font-size: 1em;
+  }
+
+  .floating-box1 {
+    width: 100%;
   }
 
   footer .left,
@@ -263,7 +268,7 @@ form {
   .floating-box,
   .floating-box1 {
     padding: 15px;
-    width: 100%; /* Full width on mobile */
+    width: 100%;
   }
 
   .floating-box h3 {
