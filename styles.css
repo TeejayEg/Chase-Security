@@ -68,14 +68,16 @@ header .btn:hover {
 .image {
   width: 100%;
   max-width: 1200px;
-  height: 600px;
+  height: 400px; /* Reduced height */
+  object-fit: cover; /* Ensures the image fits within the container without distortion */
   border-radius: 15px;
 }
 
 .image1 {
   width: 100%;
   max-width: 1200px;
-  height: auto;
+  height: 400px; /* Reduced height */
+  object-fit: cover;
   border-radius: 15px;
 }
 
