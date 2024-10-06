@@ -68,7 +68,7 @@ header .btn:hover {
 .image {
   width: 100%;
   max-width: 1200px;
-  height: auto;
+  height: 800px;
   border-radius: 15px;
 }
 
